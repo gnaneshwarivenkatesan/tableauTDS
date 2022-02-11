@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datasource xmlns:user="http://www.tableausoftware.com/xml/user" formatted-name="federated" version="18.1">
+  <connection class="federated">
+    <named-connections>
+      <named-connection name="OracleTest">
+        <connection authentication="RDBMS" class="oracle" port="" schema="" server="" service="" username=""/>
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation type="collection">
+      <relation connection="OracleTest" name="PRODUCT_DETAILS" table="[PRODUCT_DETAILS]" type="table"/>
+      <relation connection="OracleTest" name="BRAND_DETAILS" table="[BRAND_DETAILS]" type="table"/>
+      <relation connection="OracleTest" name="SALES_DETAILS" table="[SALES_DETAILS]" type="table"/>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+    <cols>
+      <map key="[PRODUCT_ID]" value="[PRODUCT_DETAILS].[PRODUCT_ID]"/>
+      <map key="[PRODUCT_NAME]" value="[PRODUCT_DETAILS].[PRODUCT_NAME]"/>
+      <map key="[PRICE]" value="[PRODUCT_DETAILS].[PRICE]"/>
+      <map key="[SALES_TOTAL]" value="[PRODUCT_DETAILS].[SALES_TOTAL]"/>
+      <map key="[BRAND_ID]" value="[PRODUCT_DETAILS].[BRAND_ID]"/>
+      <map key="[BRAND_ID (BRAND_DETAILS)]" value="[BRAND_DETAILS].[BRAND_ID]"/>
+      <map key="[BRAND_NAME]" value="[BRAND_DETAILS].[BRAND_NAME]"/>
+      <map key="[PRODUCT_ID (BRAND_DETAILS)]" value="[BRAND_DETAILS].[PRODUCT_ID]"/>
+      <map key="[PRODUCT_NAME (BRAND_DETAILS)]" value="[BRAND_DETAILS].[PRODUCT_NAME]"/>
+      <map key="[PRODUCT_ID (SALES_DETAILS)]" value="[SALES_DETAILS].[PRODUCT_ID]"/>
+      <map key="[BRAND_ID (SALES_DETAILS)]" value="[SALES_DETAILS].[BRAND_ID]"/>
+      <map key="[SALES_TOTAL (SALES_DETAILS)]" value="[SALES_DETAILS].[SALES_TOTAL]"/>
+    </cols>
+    <metadata-records>
+      <metadata-record class="column">
+        <remote-name>PRODUCT_ID</remote-name>
+        <local-name>[PRODUCT_ID]</local-name>
+        <parent-name>[PRODUCT_DETAILS]</parent-name>
+        <remote-alias>PRODUCT_ID</remote-alias>
+       <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>PRODUCT_NAME</remote-name>
+        <local-name>[PRODUCT_NAME]</local-name>
+        <parent-name>[PRODUCT_DETAILS]</parent-name>
+        <remote-alias>PRODUCT_NAME</remote-alias>
+        <local-type>string</local-type>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>PRICE</remote-name>
+        <local-name>[PRICE]</local-name>
+        <parent-name>[PRODUCT_DETAILS]</parent-name>
+        <remote-alias>PRICE</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>SALES_TOTAL</remote-name>
+        <local-name>[SALES_TOTAL]</local-name>
+        <parent-name>[PRODUCT_DETAILS]</parent-name>
+        <remote-alias>SALES_TOTAL</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>BRAND_ID</remote-name>
+        <local-name>[BRAND_ID]</local-name>
+        <parent-name>[PRODUCT_DETAILS]</parent-name>
+        <remote-alias>BRAND_ID</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>BRAND_ID</remote-name>
+        <local-name>[BRAND_ID]</local-name>
+        <parent-name>[BRAND_DETAILS]</parent-name>
+        <remote-alias>BRAND_ID</remote-alias>
+       <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>BRAND_NAME</remote-name>
+        <local-name>[BRAND_NAME]</local-name>
+        <parent-name>[BRAND_DETAILS]</parent-name>
+        <remote-alias>BRAND_NAME</remote-alias>
+        <local-type>string</local-type>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>PRODUCT_ID</remote-name>
+        <local-name>[PRODUCT_ID]</local-name>
+        <parent-name>[BRAND_DETAILS]</parent-name>
+        <remote-alias>PRODUCT_ID</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>PRODUCT_NAME</remote-name>
+        <local-name>[PRODUCT_NAME]</local-name>
+        <parent-name>[BRAND_DETAILS]</parent-name>
+        <remote-alias>PRODUCT_NAME</remote-alias>
+        <local-type>string</local-type>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>PRODUCT_ID</remote-name>
+        <local-name>[PRODUCT_ID]</local-name>
+        <parent-name>[SALES_DETAILS]</parent-name>
+        <remote-alias>PRODUCT_ID</remote-alias>
+       <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>BRAND_ID</remote-name>
+        <local-name>[BRAND_ID]</local-name>
+        <parent-name>[SALES_DETAILS]</parent-name>
+        <remote-alias>BRAND_ID</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+      <metadata-record class="column">
+        <remote-name>SALES_TOTAL</remote-name>
+        <local-name>[SALES_TOTAL]</local-name>
+        <parent-name>[SALES_DETAILS]</parent-name>
+        <remote-alias>SALES_TOTAL</remote-alias>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object id="PRODUCT_DETAILS">
+        <properties context="">
+          <relation connection="OracleTest" name="PRODUCT_DETAILS" table="[PRODUCT_DETAILS]" type="table"/>
+        </properties>
+      </object>
+    </objects>
+    <objects>
+      <object id="BRAND_DETAILS">
+        <properties context="">
+          <relation connection="OracleTest" name="BRAND_DETAILS" table="[BRAND_DETAILS]" type="table"/>
+        </properties>
+      </object>
+    </objects>
+    <objects>
+      <object id="SALES_DETAILS">
+        <properties context="">
+          <relation connection="OracleTest" name="SALES_DETAILS" table="[SALES_DETAILS]" type="table"/>
+        </properties>
+      </object>
+    </objects>
+    <relationships>
+      <relationship>
+        <expression op="=">
+          <expression op="[PRODUCT_ID]"/>
+          <expression op="[PRODUCT_ID (SALES_DETAILS)]"/>
+        </expression>
+        <first-end-point object-id="PRODUCT_DETAILS"/>
+        <second-end-point object-id=" SALES_DETAILS"/>
+      </relationship>
+      <relationship>
+        <expression op="=">
+          <expression op="[PRODUCT_ID]"/>
+          <expression op="[PRODUCT_ID (BRAND_DETAILS)]"/>
+        </expression>
+        <first-end-point object-id="PRODUCT_DETAILS"/>
+        <second-end-point object-id=" BRAND_DETAILS"/>
+      </relationship>
+    </relationships>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
